@@ -1,0 +1,83 @@
+.site-header{
+    padding: 73px 0 129px;
+}
+
+.header{
+    @include display($items:center, $space:space-between, $gap:0)
+}
+
+.header__logo-navbar-wrapper{
+    @include display($items:center, $space:space-between, $gap:80px)
+}
+
+.header__logo-link{
+    display: inline-block;
+}
+
+.header__list{
+    @include display($items:center, $space:start, $gap:40px)
+}
+
+.header__link{
+    @include textStyle($FS:18px, $FW:600, $LH:28px, $MB:0px, $CLR:white);
+    &:hover{
+        color: #F67E7E;
+        transition: 0.3s;
+    }
+    
+}
+
+.header__contact-link{
+    @include btnStyle($W:153px, $PY:10px, $BorderColor:white, $BgColor:transparent, $BtnFS:18px, $BtnFW:600, $BtnLH:28px, $BtnMB:0px, $BtnTextColor:white, $HoverBG:white, $HoverColor:#002529)
+}
+
+.header__hamburger-btn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width:800px){
+    .site-header{
+        padding: 64px 0 112px;
+    }
+    
+    .header__logo-img{
+        width: 128px;
+        height: 32px;
+    }
+    
+    .header__logo-navbar-wrapper{
+        @include display($items:center, $space:start, $gap:48px)
+    }
+}
+
+
+@media (max-width:600px){
+    .site-header{
+        padding: 48px 0 80px;
+    }
+    
+    .header__logo-img{
+        width: 128px;
+        height: 32px;
+    }
+    
+    .header__list{
+        display: none;
+    }
+    
+    .header__logo-navbar-wrapper{
+        @include display($items:center, $space:start, $gap:0px)
+    }
+    
+    .header__contact-link{
+        display: none;
+    }
+
+    .header__hamburger-btn{
+        display: block;
+    }
+    
+}
