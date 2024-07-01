@@ -75,7 +75,7 @@
         @include display($items:none, $space:center, $gap:0px);
         flex-direction: column;
         background-position: center bottom;
-        // background-size: 100%;
+        padding-bottom: 197px;
     }
     .hero__wrapper-tittle{
         width: 100%;
