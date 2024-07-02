@@ -1,0 +1,66 @@
+.mask-section {
+    background-color: #F67E7E;
+    background-image: url("../../images/mask-bg-img.svg");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 180px;
+    padding-top: 76px;
+    padding-bottom: 76px;
+}
+
+.mask__wrapper {
+    @include display($items:center, $space:space-between, $gap:0px);
+    margin-left: 98px;
+    margin-right: 98px;
+}
+
+.mask-title{
+    @include textStyle($FS:48px, $FW:700, $LH:48px, $MB:10px, $CLR:#012F34);
+}
+
+.mask__contact-link {
+    @include textStyle($FS:18px, $FW:600, $LH:28px, $MB:0px, $CLR:#012F34);
+    box-sizing: border-box;
+    border: 2px solid rgb(1, 47, 52);
+    border-radius: 24px;
+    padding: 9px 33px 11px 32px;
+    
+    &:hover{
+        color: white;
+        background-color: #012F34;
+        transition: 0.3s;
+    }
+}
+
+@media (max-width:950px){
+    .mask-section {
+        padding-top: 76px;
+        padding-bottom: 76px;
+        background-size: 150px;
+    }
+    
+    .mask-title{
+        @include textStyle($FS:32px, $FW:700, $LH:32px, $MB:0px, $CLR:#012F34);
+    }
+    
+    .mask__wrapper {
+        max-width: 100%;
+    }
+}
+@media (max-width:800px){
+    .mask-title{
+        @include textStyle($FS:32px, $FW:700, $LH:32px, $MB:24px, $CLR:#012F34);
+    }
+    
+    .mask__wrapper {
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width:380px){
+    .mask-title{
+        text-align: center;
+    }
+}

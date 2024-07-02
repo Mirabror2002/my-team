@@ -1,0 +1,94 @@
+.deliver-section{
+    padding-top: 140px;
+    padding-bottom: 140px;
+    background-image: url("../images/deliver-bg-img1.svg"),url("../images/deliver-bg-img2.svg");
+    background-position: top left, bottom right;
+    background-repeat: no-repeat, ;
+}
+
+.deliver-title{
+    @include textStyle($FS:48px, $FW:700, $LH:48px, $MB:0px, $CLR:#ffffff);
+    text-align: center;
+    margin: 0 auto;
+    max-width: 932px;
+    margin-bottom: 56px;
+}
+
+.deliver-title-span{
+    color: #79C8C7;
+}
+
+.deliver-list{
+    @include display($items:none, $space:space-between, $gap:30px);
+}
+
+.deliver__item{
+    background-image: url("../images/deliver-bg-icon.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 36px;
+    text-align: center;
+    max-width: 350px;
+}
+
+.deliver__item-text{
+    @include textStyle($FS:15px, $FW:600, $LH:25px, $MB:24px, $CLR:#ffffff);
+}
+
+.deliver__item-username{
+    @include textStyle($FS:18px, $FW:700, $LH:28px, $MB:0px, $CLR:#79c8c7);
+}
+
+.deliver__item-profession{
+    @include textStyle($FS:13px, $FW:500, $LH:18px, $MB:32px, $CLR:white);
+    font-style: italic;
+}
+
+@media (max-width:900px){
+    .deliver-section{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    
+    .deliver-title{
+        @include textStyle($FS:32px, $FW:700, $LH:32px, $MB:0px, $CLR:#ffffff);
+        text-align: center;
+        margin: 0 auto;
+        max-width: 573px;
+        margin-bottom: 48px;
+    }
+    
+    .deliver-list{
+        @include display($items:center, $space:space-between, $gap:48px);
+        flex-direction: column;
+        
+    }
+    
+    .deliver__item{
+        max-width: 80%;
+    }
+    
+    .deliver__item-text{
+        margin-bottom: 16px;
+    }
+    
+    .deliver__item-profession{
+        margin-bottom: 16px;
+    }
+}
+
+@media (max-width:600px){
+      .deliver-section{
+        padding-top: 140px;
+        padding-bottom: 164px;
+    }
+    
+    .deliver-title{
+        width: 100%;
+        margin-bottom: 48px;
+    }
+    
+    .deliver__item{
+        max-width: 100%;
+    }
+}

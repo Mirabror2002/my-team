@@ -1,0 +1,140 @@
+
+.site-footer {
+    background-color: rgb(0, 37, 41);
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.footer-wrapper {
+    @include display($items:none, $space:space-between, $gap:0px);
+}
+
+.footer-logo{
+    margin-right: 125px;
+}
+
+.footer-logo-img{
+    margin-bottom: 25px;
+}
+
+.footer-home-about{
+    @include display($items:center, $space:none, $gap:40px);
+}
+
+.footer-home-about-tetx{
+    @include textStyle($FS:18px, $FW:600, $LH:28px, $MB:0px, $CLR:#fff);
+}
+
+.footer__list {
+    width: 445px;
+    margin-right: 125px;
+}
+.footer__item {
+    @include textStyle($FS:15px, $FW:600, $LH:25px, $MB:0px, $CLR:#8ba9ad);
+}
+
+.footer-tel{
+    @include textStyle($FS:15px, $FW:600, $LH:25px, $MB:0px, $CLR:#8ba9ad);
+}
+
+.footer-link1 {
+    max-width: 264px;
+}
+
+.footer__social-network {
+    @include display($items:center, $space:flex-end, $gap:16px);
+    padding-bottom: 51px;
+}
+
+address{
+    font-style: normal;
+}
+
+.footer-social-text{
+    @include textStyle($FS:15px, $FW:600, $LH:25px, $MB:0px, $CLR:#8ba9ad);
+    width: 285px;
+}
+
+.footer-wrapperr{
+    display: none;
+}
+
+@media (max-width:885px){
+    
+    .footer-wrapper {
+        @include display($items:none, $space:space-between, $gap:0px);
+        padding-bottom: 32px;
+    }
+    
+    .footer-link1 {
+        display: none;    
+    }
+    
+    .footer__list {
+        max-width: 280px;
+        text-align: right;
+        margin: 0;
+    }
+    
+    .footer-logo{
+        margin: 0;
+    }
+    
+    .footer-wrapperr{
+        display: block;
+    }
+    
+    .footer-linkk{
+        @include display($items:none, $space:space-between, $gap:0px);
+    }
+    
+    .footer-social-textt{
+        @include textStyle($FS:15px, $FW:600, $LH:25px, $MB:0px, $CLR:#8ba9ad);
+    }
+}
+
+@media (max-width:500px){
+    
+    .footer-wrapper {
+        @include display($items:center, $space:center, $gap:0px);
+        flex-direction: column;
+    }
+    
+    .footer-home-about{
+        margin-left: 8px;
+        padding-bottom: 24px;
+        max-width: 145px;
+    }
+    
+    .footer-link1 {
+        display: block;  
+        max-width: 262px;
+        margin: 0; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .footer__list {
+        max-width: 172px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .footer-wrapperr{
+        display: none;
+    }
+    
+    .footer-social-text{
+        margin: 0 auto;
+        max-width: 262px;
+    }
+    
+    .footer__social-network {
+        @include display($items:center, $space:none, $gap:16px);
+        padding-bottom: 16px;
+    }
+    
+}
+

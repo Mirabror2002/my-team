@@ -38,7 +38,7 @@
 }
 
 .build__item-text{
-    @include textStyle($FS:15px, $FW:600, $LH:25px, $MB:0px, $CLR:#ffffff);
+    @include textStyle($FS:15px, $FW:600, $LH:25px, $MB:0px, $CLR:#79C8C7);
 }
 
 @media (max-width:1050px){
