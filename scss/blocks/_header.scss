@@ -38,6 +38,76 @@
     display: none;
 }
 
+// Modal
+.modal-outer {
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    right: -100%;
+    top: 0;
+    bottom: 0;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s linear;
+}
+.modal-inner {
+    position: fixed;
+    right: -100%;
+    padding: 56px 25px 0 48px;
+    width: 65%;
+    height: 100vh;
+    background-color: #2C6269;
+    position: absolute;
+    background-image: url("../../images/modal-hamburger-img.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+.modal__close-btn{
+    position: absolute;
+    top: 56px;
+    right: 25px;
+    background-color: transparent;
+    border: none;
+}
+
+.show-outer{
+    right: 0;
+}
+
+.show-inner{
+    right: 0;
+}
+
+.hidden-scroll{
+    overflow-y: hidden;
+}
+
+.modal-hamburger-text{
+    @include textStyle($FS:18px, $FW:600, $LH:28px, $MB:0px, $CLR:white);
+}
+
+.modal-hamburger-item{
+    margin-top: 55px;
+    margin-bottom: 24px;
+}
+
+.modal-hamburger-item2{
+    margin-bottom: 36px;
+}
+
+.modal-hamburger-contact{
+    @include textStyle($FS:18px, $FW:600, $LH:28px, $MB:0px, $CLR:white);
+    padding: 9px 33px 11px 34px;
+    box-sizing: border-box;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 24px;
+}
+
+// Modal
+
+
+
+
 @media (max-width:800px){
     .site-header{
         padding: 64px 0 112px;
@@ -75,9 +145,32 @@
     .header__contact-link{
         display: none;
     }
-
+    
     .header__hamburger-btn{
         display: block;
     }
     
+}
+
+@media (max-width:370px){
+    .modal-inner {
+        padding: 56px 10px 0 48px;
+        background-size: 80px;
+    }
+    
+    .modal-hamburger-contact{
+        padding: 9px 30px 9px 30px;
+        border-radius: 24px;
+    }
+}
+
+@media (max-width:330px){
+    .modal-inner {
+        padding: 56px 7px 0 30px;
+    }
+    
+    .modal-hamburger-contact{
+        padding: 7px 25px 7px 25px;
+        border-radius: 24px;
+    }
 }
